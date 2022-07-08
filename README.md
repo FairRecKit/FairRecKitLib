@@ -1,15 +1,14 @@
-# FairRecKit Lib
-[![Pylint](https://github.com/TheMinefreak23/fairreckitlib/actions/workflows/pylint.yml/badge.svg)](https://github.com/TheMinefreak23/fairreckitlib/actions/workflows/pylint.yml)
-[![PEP257](https://github.com/TheMinefreak23/fairreckitlib/actions/workflows/pydocstyle.yml/badge.svg)](https://github.com/TheMinefreak23/fairreckitlib/actions/workflows/pydocstyle.yml)
-[![Pytest with Coverage](https://github.com/TheMinefreak23/fairreckitlib/actions/workflows/pytest-coverage.yml/badge.svg)](https://github.com/TheMinefreak23/fairreckitlib/actions/workflows/pytest-coverage.yml)
-[![Upload to PyPI](https://github.com/TheMinefreak23/fairreckitlib/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/TheMinefreak23/fairreckitlib/actions/workflows/pypi-publish.yml)
+# FairRecKitLib
+[![Pylint](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pylint.yml/badge.svg)](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pylint.yml)
+[![PEP257](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pydocstyle.yml/badge.svg)](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pydocstyle.yml)
+[![Pytest with Coverage](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pytest-coverage.yml/badge.svg)](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pytest-coverage.yml)
+[![Upload to PyPI](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pypi-publish.yml)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/TheMinefreak23/fairreckitlib?label=Release)
 
 FairRecKitLib is a library that functions as a combinatory interface between a set of existing recommender libraries, such as [Lenskit](https://pypi.org/project/lenskit/), [Implicit](https://pypi.org/project/implicit/), and [Surprise](https://pypi.org/project/scikit-surprise/). It was made to accompany the [FairRecKit application](https://github.com/FairRecKit/FairRecKitApp).
 
-This program has been developed by students from the bachelor Computer Science at
-Utrecht University within the Software Project course, commissioned by dr. Christine Bauer. 
+This program has been developed by students from the bachelor Computer Science program at Utrecht University within the Software Project course, commissioned by Christine Bauer.
 
 Lennard Chung,          Aleksej Cornelissen,
 Isabelle van Driessel,  Diede van der Hoorn,
@@ -32,4 +31,4 @@ Meeting these requirements, you can install FairRecKitLib like any PyPI package,
 `conda install fairreckitlib`
 
 # Documentation
-Please check out the [FairRecKitLib Wiki]([https://github.com/TheMinefreak23/fairreckitlib](https://github.com/FairRecKit/FairRecKitLib)/wiki) and [FairRecKitLib API]([https://theminefreak23.github.io/fairreckitlib](https://github.com/FairRecKit/FairRecKitLib)/src/fairreckitlib) for instructions and guides on how to utilise the library or add new functionality.
+Please check out the [FairRecKitLib Wiki](https://github.com/FairRecKit/FairRecKitLib/wiki) and [FairRecKitLib API](https://github.com/FairRecKit/FairRecKitLib/src/fairreckitlib) for instructions and guides on how to utilize the library or add new functionality.

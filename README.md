@@ -20,7 +20,7 @@ Vos Wesseling,          Fern Wieland
 © Copyright Utrecht University (Department of Information and Computing Sciences)
 
 If you use FairRecKit in published research, please cite:
-> Christine Bauer, Lennard Chung, Aleksej Cornelissen, Isabelle van Dries-sel, Diede van der Hoorn, Yme de Jong, Lan Le, Sanaz Najiyan Tabriz, Ro-derick Spaans, Casper Thijsen, Robert Verbeeten, Vos Wesseling, & Fern Wieland (2023). FairRecKit: A Web-based analysis software for recommender evaluations. Proceedings of the 8th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2023), Austin, TX, USA, 19–23 March. DOI: [10.1145/3576840.3578274](https://doi.org/10.1145/3576840.3578274)
+> Christine Bauer, Lennard Chung, Aleksej Cornelissen, Isabelle van Driessel, Diede van der Hoorn, Yme de Jong, Lan Le, Sanaz Najiyan Tabriz, Roderick Spaans, Casper Thijsen, Robert Verbeeten, Vos Wesseling, & Fern Wieland (2023). FairRecKit: A Web-based analysis software for recommender evaluations. Proceedings of the 8th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2023), Austin, TX, USA, 19–23 March. DOI: [10.1145/3576840.3578274](https://doi.org/10.1145/3576840.3578274)
 
 # Installation Requirements
 FairRecKitLib utilises the scikit-surprise package, which relies on having a suitable C/C++ compiler present on the system to be able to install itself. For this purpose, make sure you have [Cython](https://pypi.org/project/Cython/) installed before attempting to install FairRecKitLib. If your system lacks a compiler, install the 'Desktop development with C++' build tools through the [Visual Studio installer](https://aka.ms/vs/17/release/vs_buildtools.exe).

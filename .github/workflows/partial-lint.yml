@@ -13,9 +13,10 @@ jobs:
     outputs: 
       files: steps.changedfiles.changed-files.outputs
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+          fetch-depth: 2  # Fetch enough history to detect changes
 
       - name: Get changed files
         id: changed-files
@@ -32,8 +33,11 @@ jobs:
       
       - name: Set up Python
         uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
       
-      - uses: actions/cache@v4
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
         with:
           path: ${{ env.pythonLocation }}
           key: ${{ env.pythonLocation }}-${{ hashFiles('setup.py') }}-${{ hashFiles('requirements.txt') }}
@@ -43,8 +47,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: Lint all changed files
+      - name: Lint all changed Python files
         run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             pylint --disable=R0913,W0511,W0613 $file
           done
+          exit $exit_code

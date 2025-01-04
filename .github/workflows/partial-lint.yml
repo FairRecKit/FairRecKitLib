@@ -13,7 +13,7 @@ jobs:
     outputs: 
       files: steps.changedfiles.changed-files.outputs
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
 
@@ -31,9 +31,9 @@ jobs:
           echo "${{ steps.changed-files.outputs.any_changed }}"
       
       - name: Set up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
       
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: ${{ env.pythonLocation }}
           key: ${{ env.pythonLocation }}-${{ hashFiles('setup.py') }}-${{ hashFiles('requirements.txt') }}

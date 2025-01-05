@@ -8,7 +8,7 @@ on:
 
 jobs:
   lintchanges:
-    runs-on: ubuntu-18.04  # runs-on: ubuntu-latest | windows-latest | macos-latest
+    runs-on: ubuntu-latest #runs-on: ubuntu-latest | windows-latest | macos-latest
     name: Retrieve and lint changed files
     outputs: 
       files: ${{ steps.changed-files.outputs.all_changed_files }}

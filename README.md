@@ -19,7 +19,7 @@ Yme de Jong,
 Lan Le,
 Sanaz Najiyan Tabriz,
 Roderick Spaans,
-Casper Thijsen,+
+Casper Thijsen,
 Robert Verbeeten,
 Vos Wesseling,
 Fern Wieland    

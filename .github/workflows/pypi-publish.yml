@@ -11,11 +11,13 @@ jobs:
     name: Build and publish Python distribution to PyPI
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.x'
+        python-version: '3.9.x'
+        
     - name: Install pypa/build
       run: >-
         python -m 
@@ -29,12 +31,14 @@ jobs:
         --sdist
         --wheel
         --outdir dist/
-    - name: Publish package on Test PyPI
-      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
-      with:
-        user: __token__
-        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
-        repository_url: https://test.pypi.org/legacy/
+        
+#    - name: Publish package on Test PyPI
+#      uses: pypa/gh-action-pypi-publish@ 27b31702a0e7fc50959f5ad993c78deac1bdfc29 27b31702a0e7fc50959f5ad993c78deac1bdfc29
+#      with:
+#        user: __token__
+#        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+#        repository_url: https://test.pypi.org/legacy/
+
     - name: Publish package on PyPI
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
       with:

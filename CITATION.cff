@@ -1,0 +1,83 @@
+cff-version: 1.2.0
+title: >-
+  FairRecKit: FairRecKitLib is a library that functions as a combinatory interface between a set of existing recommender libraries, such as LensKit, Implicit, and Surprise. It was made to accompany the FairRecKit application (FairRecKitApp).
+message: >-
+  If you use this software, please cite both the article
+  from preferred-citation and the software itself.
+type: software
+authors:
+  - family-names: Bauer
+    given-names: Christine
+    orcid: 'https://orcid.org/0000-0001-5724-1137'
+  - family-names: Chung
+    given-names: Lennard
+  - family-names: Cornelissen
+    given-names: Aleksej
+  - family-names: van Driessel
+    given-names: Isabelle
+  - family-names: van der Hoorn
+    given-names: Diede
+  - family-names: de Jong
+    given-names: Yme
+  - family-names: Le
+    given-names: Lan
+  - family-names: Najiyan Tabriz
+    given-names: Sanaz
+  - family-names: Spaans
+    given-names: Roderick
+  - family-names: Thijsen
+    given-names: Casper
+  - family-names: Verbeeten
+    given-names: Robert
+  - family-names: Wesseling
+    given-names: Vos
+  - family-names: Wieland
+    given-names: Fern
+identifiers:
+  - type: url
+    value: 'https://github.com/FairRecKit/FairRecKitLib'
+url: 'https://github.com/FairRecKit/'
+license: Apache-2.0
+version: 1.0.0
+date-released: '2022-06-23'
+preferred-citation:
+  authors:
+    - family-names: Bauer
+      given-names: Christine
+      orcid: 'https://orcid.org/0000-0001-5724-1137'
+    - family-names: Chung
+      given-names: Lennard
+    - family-names: Cornelissen
+      given-names: Aleksej
+    - family-names: van Driessel
+      given-names: Isabelle
+    - family-names: van der Hoorn
+      given-names: Diede
+    - family-names: de Jong
+      given-names: Yme
+    - family-names: Le
+      given-names: Lan
+    - family-names: Najiyan Tabriz
+      given-names: Sanaz
+    - family-names: Spaans
+      given-names: Roderick
+    - family-names: Thijsen
+      given-names: Casper
+    - family-names: Verbeeten
+      given-names: Robert
+    - family-names: Wesseling
+      given-names: Vos
+    - family-names: Wieland
+      given-names: Fern
+  title: 'FairRecKit: A Web-based analysis software for recommender evaluations'
+  doi: 10.1145/3576840.3578274
+  type: conference-paper
+  start: 438
+  end: 443
+  year: '2023'
+  collection-title: 2023 Conference on Human Information Interaction and Retrieval
+  conference:
+    name: CHIIR 2023
+  publisher:
+    name: ACM
+    address: 'New York, NY, USA'

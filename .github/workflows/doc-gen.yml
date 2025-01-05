@@ -11,16 +11,28 @@ permissions:
 jobs:
   # Build the documentation and upload the static HTML files as an artifact.
   build:
+    name: Build Documentation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9.x'
 
-      - run: pip install pdoc
-      - run: pdoc -o docs/ ./src/fairreckitlib  
+      - name: Install pdoc
+        run: pip install pdoc
+        
+      - name: Generate Documentation
+        run: pdoc -o docs/ ./src/fairreckitlib  
 
-      - run: tar --directory docs/ -hcf artifact.tar .
-      - uses: actions/upload-artifact@v3
+      - name: Package Documentation
+        run: tar --directory docs/ -hcf artifact.tar .
+
+      - name: Upload Documentation Artifact
+        uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: ./artifact.tar
@@ -28,6 +40,7 @@ jobs:
   # Deploy the artifact to GitHub pages.
   # This is a separate job so that only actions/deploy-pages has the necessary permissions.
   deploy:
+    name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -37,5 +50,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

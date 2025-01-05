@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest #runs-on: ubuntu-latest | windows-latest | macos-latest
     outputs: 
       files: ${{ steps.changed-files.outputs.all_changed_files }}
+      any_changed: ${{ steps.changed-files.outputs.any_changed }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,7 +30,7 @@ jobs:
             
       - name: Check for Any Changes
         run: |
-          echo "${{ steps.changed-files.outputs.any_changed }}"
+          echo "any_changed=${{ steps.changed-files.outputs.any_changed }}" >> $GITHUB_OUTPUT
       
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,8 +40,10 @@ jobs:
       - name: Cache pip dependencies
         uses: actions/cache@v4
         with:
-          path: ${{ env.pythonLocation }}
-          key: ${{ env.pythonLocation }}-${{ hashFiles('setup.py') }}-${{ hashFiles('requirements.txt') }}
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('setup.py', 'requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
       
       - name: Install dependencies
         run: |
@@ -51,7 +54,7 @@ jobs:
         run: |
           # Extract the list of changed files
           changed_files="${{ steps.changed-files.outputs.all_changed_files }}"
-          if [ -z "$changed_files" ]; then
+          if [[ -z "${changed_files// }" ]]; then
             echo "No Python files changed."
             exit 0
           fi

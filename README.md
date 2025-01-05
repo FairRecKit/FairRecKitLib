@@ -4,7 +4,7 @@
 [![Pytest with Coverage](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pytest-coverage.yml/badge.svg)](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pytest-coverage.yml)
 [![Upload to PyPI](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/FairRecKit/FairRecKitLib/actions/workflows/pypi-publish.yml)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/TheMinefreak23/fairreckitlib?label=Release)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/FairRecKit/FairRecKitLib?label=Release)
 
 FairRecKitLib is a library that functions as a combinatory interface between a set of existing recommender libraries, such as [LensKit](https://pypi.org/project/lenskit/), [Implicit](https://pypi.org/project/implicit/), and [Surprise](https://pypi.org/project/scikit-surprise/). It was made to accompany the [FairRecKit application (FairRecKitApp)](https://github.com/FairRecKit/FairRecKitApp).
 

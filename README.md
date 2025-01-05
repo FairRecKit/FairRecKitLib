@@ -10,16 +10,23 @@ FairRecKitLib is a library that functions as a combinatory interface between a s
 
 This software has been developed by students within the Software Project course of the bachelor program Computer Science at Utrecht University, commissioned by Christine Bauer.
 
-Lennard Chung,          Aleksej Cornelissen,
-Isabelle van Driessel,  Diede van der Hoorn,
-Yme de Jong,            Lan Le,
-Sanaz Najiyan Tabriz,   Roderick Spaans,
-Casper Thijsen,         Robert Verbeeten,
-Vos Wesseling,          Fern Wieland    
+Development team: 
+Lennard Chung, 
+Aleksej Cornelissen,
+Isabelle van Driessel,
+Diede van der Hoorn,
+Yme de Jong,
+Lan Le,
+Sanaz Najiyan Tabriz,
+Roderick Spaans,
+Casper Thijsen,+
+Robert Verbeeten,
+Vos Wesseling,
+Fern Wieland    
 
 © Copyright Utrecht University (Department of Information and Computing Sciences)
 
-If you use FairRecKit in published research, please cite:
+If you use FairRecKit in research, please cite:
 > Christine Bauer, Lennard Chung, Aleksej Cornelissen, Isabelle van Driessel, Diede van der Hoorn, Yme de Jong, Lan Le, Sanaz Najiyan Tabriz, Roderick Spaans, Casper Thijsen, Robert Verbeeten, Vos Wesseling, & Fern Wieland (2023). FairRecKit: A Web-based analysis software for recommender evaluations. Proceedings of the 8th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2023), Austin, TX, USA, 19–23 March, pp 438-443. DOI: [10.1145/3576840.3578274](https://doi.org/10.1145/3576840.3578274)
 
 # Installation Requirements

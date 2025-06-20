@@ -28,7 +28,7 @@ jobs:
 
     - name: Force install pip 23.2.1 using get-pip.py
       run: |
-        curl -sS https://bootstrap.pypa.io/pip/3.9/get-pip.py -o get-pip.py
+        curl -sS https://bootstrap.pypa.io/pip/get-pip.py -o get-pip.py
         python get-pip.py pip==23.2.1
 
     - name: Confirm pip version

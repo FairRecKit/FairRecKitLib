@@ -27,9 +27,7 @@ jobs:
     #    key: ${{ env.pythonLocation }}-${{ hashFiles('setup.py') }}-${{ hashFiles('requirements.txt') }}
 
     - name: Force install pip 23.2.1 using get-pip.py
-      run: |
-        curl -sS https://bootstrap.pypa.io/pip/get-pip.py -o get-pip.py
-        python get-pip.py pip==23.2.1
+      run: python -m pip install --upgrade pip==23.2.1
 
     - name: Confirm pip version
       run: pip --version
@@ -38,4 +36,4 @@ jobs:
       run: pip install -r requirements.txt
         
     - name: Analysing the code with pylint
-      run: pylint $(git ls-files '*.py') --fail-under=9 --fail-on=E
+      run: pylint "$(git ls-files '*.py')" --fail-under=9 --fail-on=E

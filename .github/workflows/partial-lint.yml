@@ -29,8 +29,7 @@ jobs:
             !**.py
             
       - name: Check for Any Changes
-        run: |
-          echo "any_changed=${{ steps.changed-files.outputs.any_changed }}" >> $GITHUB_OUTPUT
+        run: echo "any_changed=${{ steps.changed-files.outputs.any_changed }}" >> $GITHUB_OUTPUT
       
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -60,10 +59,12 @@ jobs:
           fi
           
           # Lint each file and collect errors
+          IFS=$'\n'
           exit_code=0
           for file in $changed_files; do
             pylint --disable=R0913,W0511,W0613 "$file" || exit_code=$?
           done
+          unset IFS
           
           # Exit with the appropriate code
           exit $exit_code

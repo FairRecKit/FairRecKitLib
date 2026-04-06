@@ -93,7 +93,7 @@ class LensKitRecommender(Recommender):
         recs = self.algo.recommend(user, n=num_items)
         # random algo does not produce a score
         if self.get_name() == lenskit_algorithms.RANDOM:
-            recs['score'] = np.full(num_items, 1)
+            recs['score'] = 1
 
         return recs
 
@@ -115,12 +115,33 @@ class LensKitRecommender(Recommender):
         Returns:
             dataframe with the columns: 'rank', 'user', 'item', 'score'.
         """
-        n_jobs = self.num_threads if self.num_threads > 0 else None
-        recs = batch.recommend(self.algo, users, num_items, n_jobs=n_jobs)
+        all_recs = []
+
+        for user in users:
+            try:
+                recs = self.algo.recommend(user, n=num_items)
+
+                # Skip users with no results
+                if recs is None or recs.empty:
+                    continue
+
+                recs['user'] = user
+                recs['rank'] = np.arange(1, len(recs) + 1)
+
+                all_recs.append(recs)
+
+            except ValueError:
+                # This catches the "sample larger than population" error
+                continue
+
+        if not all_recs:
+            return pd.DataFrame(columns=['rank', 'user', 'item', 'score'])
+
+        recs = pd.concat(all_recs, ignore_index=True)
 
         # random algo does not produce a score
         if self.get_name() == lenskit_algorithms.RANDOM:
-            recs['score'] = np.full(len(users) * num_items, 1)
+            recs['score'] = 1
 
         return recs[['rank', 'user', 'item', 'score']]
 
